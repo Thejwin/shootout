@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="img/football.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jersey+10&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Irish+Grover&display=swap">
+  <link rel="stylesheet" href="style.css" />
+  <title>Shoot</title>
+</head>
+
+<body>
+  <header>
+    <h1 jersey-10>SHOOT</h1>
+    <nav>
+        <a href="">Instructions</a>
+        <a href="">About</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="buttons">
+      
+      <button id="vs-ai" class="cta-button">
+        <img src="img/computer.png" alt="AI Icon" class="btn-icon">
+        <span class="btn-txt">VS AI</span>
+      </button>
+  
+  
+      <button id="multiplayer" class="cta-button">
+        <img src="img/multiplayer.png" alt="Multiplayer Icon" class="btn-icon">
+        <span class="btn-txt">MULTIPLAYER</span>
+      </button>
+      
+    </div>
+    <p>Time for mind games....</p>
+  </section>
+
+  <footer>  
+    <p>&copy; 2025 SHOOT. All rights reserved.</p>
+  </footer>
+  <script>
+  document.getElementById("vs-ai").addEventListener("click", function() {
+    window.location.href = "vs-ai.html"; 
+  });
+
+  document.getElementById("multiplayer").addEventListener("click", function() {
+    window.location.href = "multiplayer.html"; 
+  });
+</script>
+</body>
+
+</html>
