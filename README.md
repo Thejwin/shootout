@@ -17,3 +17,4 @@ A simple browser-based multiplayer/AI game.
    ```bash
    git clone https://github.com/Thejwin/shootout.git
    cd shootout
+test 
