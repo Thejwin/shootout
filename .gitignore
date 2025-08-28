@@ -1,0 +1,18 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# IDE/editor
+.vscode/
+.idea/
+*.swp
+
+# Future: Node.js / npm
+node_modules/
+
+# Future: Build output
+dist/
+build/
