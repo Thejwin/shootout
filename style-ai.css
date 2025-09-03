@@ -47,30 +47,72 @@ nav a:hover{
     color: #0a1a11;
 }
 
+.game-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .playground {
-    background-color: peachpuff;
-    margin: 2%;
-    width: 96%;
+    background-image: url("./img/playground.jpg");
+    width: 100%;
+    max-width: 700px;
+    height: 500px; 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat
     border: solid black 5px;
-    border-radius: 10px;
-    height: 30rem;
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 0px;
 }
 
-.goal-post {
-    height: 10rem;
-    background-color: #498D65;
+.stadium {
+    height: 256px;
+    /* background-color: #498D65; */
 }
 
-.ad-space {
-    height: 2rem;
-    background-color: #0f4a8d;
+.goal-post-container {
+    height: 70px;
+   /* background-color: #0f4a8d ;  */
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   just
+}
+
+.goal-post {
+    height: 70px;
+    width: 190px;
+    position: relative;
+    overflow: visible;
+}
+}
+
+.keeper {
+    position: absolute;
+    bottom: 0px; /* adjust so feet line up with grass */
+    left: 50%;
+    transform: translateX(-50%);
+    height: 70px;   /* shrink keeper width */
+    width: auto; 
+}
+
+.ball {
+    position: absolute;
+    bottom: -30px; /* in front of post */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 154px; 
+    height: 128px;
+
+    background: url("./img/characters/spinframes.png") no-repeat;
+    background-size: 768px 128px;
 }
 
 .ground {
-    height: 18rem;
-    background-color: rgb(48, 228, 57);
+    height: 176px;
+    /* background-color: rgb(48, 228, 57); */
 }
