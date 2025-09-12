@@ -60,13 +60,13 @@ nav a:hover{
     height: 500px; 
     background-size: cover; 
     background-position: center; 
-    background-repeat: no-repeat
-    border: solid black 5px;
+    background-repeat: no-repeat;
+    border: 5px solid black;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 0px;
+    gap: 0;
 }
 
 .stadium {
@@ -80,39 +80,84 @@ nav a:hover{
    display: flex;
    flex-direction: column;
    align-items: center;
-   just
 }
 
 .goal-post {
     height: 70px;
     width: 190px;
     position: relative;
-    overflow: visible;
+    /* overflow: visible; */
 }
+
+;root {
+    --gk-scale: 0.32;
 }
 
 .keeper {
     position: absolute;
-    bottom: 0px; /* adjust so feet line up with grass */
+    bottom: -10px;  /* adjust based on field */
     left: 50%;
     transform: translateX(-50%);
-    height: 70px;   /* shrink keeper width */
-    width: auto; 
+    height: 70px;   /* scale down */
+    width: auto;  /* keep proportions */
+    z-index: 2;
 }
 
 .ball {
     position: absolute;
-    bottom: -30px; /* in front of post */
+    bottom: -200px; /* in front of post */
     left: 50%;
-    transform: translateX(-50%);
-    width: 154px; 
+    transform: translateX(-50%) scale(0.8);
+    width: 128px; 
     height: 128px;
-
-    background: url("./img/characters/spinframes.png") no-repeat;
-    background-size: 768px 128px;
+    z-index: 3;
+    background: url("./img/characters/ball.png") no-repeat;
+    animation:  0.5s ease-in; 
+    /* background-size: 768px 128px; */
+    transition: all 0.5s ease-in;
 }
+
+/* @keyframes spin {
+  from { background-position: 0 0; }
+  to { background-position: -200px 0; }
+} */
+
+@keyframes shoot-straight {
+  to { bottom: -10px; }
+}
+
+@keyframes shoot-left {
+  to { bottom: -10px; left: 30%; }
+}
+
+@keyframes shoot-right {
+  to { bottom: -10px; left: 70%; }
+}
+
+.shoot-straight { animation: shoot-straight 0.8s linear forwards; }
+.shoot-left     { animation: shoot-left 0.8s linear forwards; }
+.shoot-right    { animation: shoot-right 0.8s linear forwards; }
 
 .ground {
     height: 176px;
     /* background-color: rgb(48, 228, 57); */
+}
+
+.controls {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 9vh;
+    width: 90vh;
+}
+
+.ctrl-btn {
+    height: 6vh;
+    width: 20vh;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.ctrl-btn:hover {
+    background-color: #1E4F32;
 }

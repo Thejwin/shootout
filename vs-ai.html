@@ -24,19 +24,18 @@
       <div class="goal-post-container">
         <div class="goal-post">
           <img class="keeper" src="./img/characters/gk0.png" alt="Goalkeeper">
-          <div class="ball"></div>
+          <div class="ball" id="ball"></div>
         </div>
       </div>
       <data class="ground"></data>
     </div>
     <div class="controls">
-      <button class="ctrl-btn btn-left">⬅️</button>
-      <button class="ctrl-btn btn-middle">⬆️</button>
-      <button class="ctrl-btn btn-right">➡️</button>
+      <button class="ctrl-btn btn-left" onclick="shoot('left')">⬅️</button>
+      <button class="ctrl-btn btn-middle" onclick="shoot('middle')">⬆️</button>
+      <button class="ctrl-btn btn-right" onclick="shoot('right')">➡️</button>
     </div>
   </section>
-  <script>
-  </script>
+  <script src="vs-ai.js"></script>
 </body>
 
 </html>
