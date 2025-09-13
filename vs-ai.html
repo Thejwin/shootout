@@ -20,19 +20,42 @@
   </header>
   <section class="game-area">
     <div class="playground">
-      <div class="stadium"></div>
+      <div class="stadium">
+        <div class="score">
+          <div class="score-player">
+            <div class="player-profile"></div>
+            <div class="player-name"><strong>YOU</strong></div>
+            <div class="score-goals-player"><strong>0</strong></div>
+            <div class="score-box-player"></div>
+            <div class="score-box-player"></div>
+            <div class="score-box-player"></div>
+            <div class="score-box-player"></div>
+            <div class="score-box-player"></div>
+          </div>
+          <div class="score-opponent">
+            <div class="score-box-opponent"></div>
+            <div class="score-box-opponent"></div>
+            <div class="score-box-opponent"></div>
+            <div class="score-box-opponent"></div>
+            <div class="score-box-opponent"></div>
+            <div class="score-goals-opponent"><strong>0</strong></div>
+            <div class="opponent-name"><strong>BOT</strong></div>
+            <div class="opponent-profile"></div>
+          </div>
+        </div>
+      </div>
       <div class="goal-post-container">
         <div class="goal-post">
-          <img class="keeper" src="./img/characters/gk0.png" alt="Goalkeeper">
+          <img class="keeper" id="keeper" src="./img/characters/gk0.png" alt="Goalkeeper">
           <div class="ball" id="ball"></div>
         </div>
       </div>
       <data class="ground"></data>
     </div>
     <div class="controls">
-      <button class="ctrl-btn btn-left" onclick="shoot('left')">⬅️</button>
-      <button class="ctrl-btn btn-middle" onclick="shoot('middle')">⬆️</button>
-      <button class="ctrl-btn btn-right" onclick="shoot('right')">➡️</button>
+      <button id="btn-left" class="ctrl-btn btn-left">⬅️</button>
+      <button id="btn-middle" class="ctrl-btn btn-middle">⬆️</button>
+      <button id="btn-right" class="ctrl-btn btn-right">➡️</button>
     </div>
   </section>
   <script src="vs-ai.js"></script>

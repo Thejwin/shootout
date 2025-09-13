@@ -5,14 +5,14 @@
   ball.classList.add("shoot-" + direction);
 } */
 
-const btn_left = document.querySelector("btn-left");
-const btn_middle = document.querySelector("btn-middle");
-const btn_right = document.querySelector("btn-right");
+const btn_left = document.getElementById("btn-left");
+const btn_middle = document.getElementById("btn-middle");
+const btn_right = document.getElementById("btn-right");
 
-/* btn_left.addEventListener('click',shoot("left"))
-btn_middle.addEventListener('click',shoot("middle"))
-btn_right.addEventListener('click',shoot("right"))
- */
+btn_left.addEventListener('click',() => shoot("left"));
+btn_middle.addEventListener('click',() => shoot("middle"));
+btn_right.addEventListener('click',() => shoot("right"));
+
 let bottomPos = -200;
 let leftPos = 50;
 function shoot(direction) {
@@ -25,7 +25,8 @@ function shoot(direction) {
   }
  
   const ball = document.getElementById("ball");
-  ball.style.bottom = bottomPos + "px"; // ✅ animate bottom, not top
+  ball.style.bottom = bottomPos + "px";
   ball.style.left = leftPos + "%";
   ball.style.transform = "translateX(-50%) scale(0.25)";
 }
+
