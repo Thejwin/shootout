@@ -94,10 +94,11 @@ nav a:hover{
 }
 
 .score {
-    background-color: aliceblue;
+    background-color: rgb(226, 214, 210);
     width: 100%;
     height: 56px;
-
+    border: 1px solid black;
+    border-radius: 0 0 10px 10px;
     display: flex;
     justify-content: space-between;
 
@@ -106,7 +107,7 @@ nav a:hover{
 .score-player, .score-opponent {
     width: 48%;
     height: 100%;
-    background-color: chartreuse;
+    /* background-color: rgb(127, 255, 0); */
     display: flex;
     align-items: center;
     gap: 3%;
