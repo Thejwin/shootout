@@ -88,14 +88,16 @@ function shootOrSave(direction) {
     else{ 
       save(direction);
       shoot(direction);
-      infoTextH2.innerText = "It's a save :(";
       playable = false;
+      infoTextH2.innerText = "It's a save :(";
     }
 
     setTimeout(() => {
       resetSprites();
-      playable = true;
       infoTextH2.innerText = "Shoot";
-    }, 2000);
+      setTimeout(() => {
+        playable = true;
+      }, 1000);
+    }, 1000);
   }
 }
