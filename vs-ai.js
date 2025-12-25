@@ -20,8 +20,8 @@ const scoreOpponent = document.getElementById("opponent-score");
 const playerAttempts = document.querySelectorAll(".score-box-player");
 const opponentAttempts = document.querySelectorAll(".score-box-opponent");
 
-infoTextH2.addEventListener('click',() => initGame());
-btn_left.addEventListener('click',() => shootOrSave("left"));
+infoTextH2.addEventListener('click',() => initGame());  // Entry here!!
+btn_left.addEventListener('click',() => shootOrSave("left")); // then any of these in repeat
 btn_middle.addEventListener('click',() => shootOrSave("middle"));
 btn_right.addEventListener('click',() => shootOrSave("right"));
 
@@ -51,16 +51,16 @@ function shoot(direction) {
 function save(direction) {
   
   if (direction === 'middle') {
-    keeper.src = "./img/characters/gk3.png";
+     keeper.src = (userInput === 'shoot') ? "./img/characters/egk3.png" : "./img/characters/gk3.png";
   }
   else if (direction === 'right' ){
-    keeper.src = "./img/characters/gk2.png";
+    keeper.src = (userInput === 'shoot') ? "./img/characters/egk2.png" : "./img/characters/gk2.png";
     keeper.style.left = "40%";
     keeper.style.transform = "scale(0.8)";
     keeper.style.bottom = "-30px";
   }
   else {
-    keeper.src = "./img/characters/gk2.png";
+    keeper.src = (userInput === 'shoot') ? "./img/characters/egk2.png" : "./img/characters/gk2.png";
     keeper.style.left = "-20%";
     keeper.style.transform = "scale(0.8) scaleX(-1)";
     invertedKeeper = true;
@@ -70,7 +70,7 @@ function save(direction) {
 
 function resetSprites(){
   // reset keeper 
-  keeper.src = "./img/characters/gk0.png";
+  keeper.src = (userInput === 'shoot') ? "./img/characters/egk0.png" : "./img/characters/gk0.png";
   keeper.style.left = "50%";
   keeper.style.transform = "translateX(-50%) scale(1)";
   if (invertedKeeper) {
