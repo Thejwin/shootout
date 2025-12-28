@@ -1,4 +1,4 @@
-# Shootout 🎯
+# Shootout 
 
 A simple browser-based football penalty shootout game
 
